@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
   <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
   <!-- Code syntax highlighting -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -71,7 +71,28 @@
     <section>
       <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
-      <img src="img/Selection_013.png">
+      <!--<img src="img/Selection_013.png">-->
+ <pre><code data-trim>
+public int Factorial(int n)
+{
+	if (n == 0)//+RD20151017
+		return 1;//+RD20151017
+	else//+RD20151017
+		return n * Factorial(n-1);
+}    
+
+int factorial ( int input )
+{
+  int x, fact = 1;
+  for ( x = input; x > 1; x--)
+     fact *= x;
+
+  return fact;
+
+}
+
+System.out.println("Hellow world")
+</code></pre>
     </section>
 
     <section>
@@ -86,12 +107,12 @@
 
     <section>
       <h2>Controlul versiunilor cu Git</h2>
-      <img src="img/snapshot.png"/>
+      <img src="img/snapshots.png">
       (c) http://git-scm.com/book/en/v2/Getting-Started-Git-Basics#Snapshots,-Not-Differences
     </section>
 
     <section>
-      <h2>Distributivitatea lui Git</h2>
+      <h2>Distributivitatea :-) lui Git</h2>
       <img src="img/distributed-vc.png">
       <img src="img/centralized-vc.png">
 
