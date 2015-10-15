@@ -137,29 +137,197 @@ System.out.println("Hellow world")
 
     <section>
       <h2>Instalare Git</h2>
-      https://desktop.github.com/
-      http://git-scm.com/downloads
+<ul>
+<li class="fragment"><a href="http://git-scm.com/downloads">Git linia de comandă</a></li>
+<li class="fragment"><a href="https://desktop.github.com/">Mediu de lucru cu proiectele de pe GitHub</a></li>
+</ul>
+      
     </section>
 
     <section>
-      <h2>Exemple și noțiuni</h2>
+      <h2>Proiect Git nou</h2>
+
+ <pre><code data-trim>
+   git init workshop
+   cd workshop
+ </code></pre>
+
+sau
+
+ <pre><code data-trim>
+   mkdir workshop
+   cd workshop 
+   git init
+ </code></pre>
+
+
+Format general:
+
+ <pre><code data-trim>
+   git init [dosar]
+ </code></pre>
+
+Puteți executa acestă comandă de câte ori doriți pe un proiect deja existent.
+    </section>
+
+    <section>
+      <h2>Un fișier</h2>
+
+<pre><code class="bash" data-trim>
+touch README
+echo 'Primul proiect folosind Git' > README
+git status
+</code></pre>
+
+<img src="img/git-status1.png">
+Explicații: untracked
+
+
+    </section>
+
+   <section>
+      <h2>Un fișier</h2>
+
+<pre><code class="bash" data-trim>
+git add README
+git status
+</code></pre>
+
+<img src="img/git-status2.png">
+
+Explicații: stage unstage
+
+    </section>
+
+   <section>
+      <h2>Un fișier</h2>
+
+<pre><code class="bash" data-trim>
+git commit -m 'Adaugă descrierea proiectului'
+git status
+</code></pre>
+
+<img src="img/git-status3.png">
+
+Explicații: ce este working directory
+    </section>
+
+    <section>
+      <h2>Un desen</h2>
+
+      <table>
+        <thead>
+        <tr>
+          <th>Git Dir</th>
+          <th>Stage</th>
+          <th>Work Dir</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>README</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+        <tr>
+          <th>Git Dir</th>
+          <th>Stage</th>
+          <th>Work Dir</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td></td>
+          <td>README</td>
+          <td>README</td>
+        </tr>
+        </tbody>
+      </table>
+
+git add
+
+      <table>
+        <thead>
+        <tr>
+          <th>Git Dir</th>
+          <th>Stage</th>
+          <th>Work Dir</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>README</td>
+          <td>README</td>
+          <td>README</td>
+        </tr>
+        </tbody>
+      </table>
+
+git commit
+
+    </section>
+
+   <section>
+      <h2>Un fișier</h2>
+
+<pre><code class="bash" data-trim>
+echo 'Autor: Radu D.' >> README
+git status
+</code></pre>
+
+<img src="img/git-status4.png">
+
+Explicații: 
+    </section>
+
+
+   <section>
+      <h2>Diferite comenzi</h2>
+
+<pre><code class="bash" data-trim>
+git add README
+git commit -m 'Adaugă autorul'
+echo 'Data: 17 octombrie 2015' >> README
+</code></pre>
+
+    </section>
+
+   <section>
+      <h2>Diferite comenzi</h2>
+
+<pre><code class="bash" data-trim>
+git diff
+git show
+git log
+git blame
+</code></pre>
+
+configurare nume autor și email
+
     </section>
 
     <section>
       <h2>Exerciții</h2>
+
+Creați un fisier style_<nickname>.css
+Umpleți-l cu stil pentru un buton cu id=<nickname>
+Comiteți
     </section>
 
     <section>
-      <h2>Ramuri</h2>
+      <h2>GitHub</h2>
+
+    Cont nou
+    Proiect nou
+    
     </section>
 
-    <section>
-      <h2>Exerciții</h2>
-    </section>
 
-    <section>
-      <h2></h2>
-    </section>
 
     <section>
       <h2>Proiect pe GitHub</h2>
