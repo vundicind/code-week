@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
 
-  <title>reveal.js - The HTML Presentation Framework</title>
+  <title>What is Git? - EU Code Week</title>
 
-  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-  <meta name="author" content="Hakim El Hattab">
+  <meta name="description" content="Diapozitivele pentru atelierul de Git și GitHub din cadrul evenimentului Săptămâna Europeană a Programarii (EU Code Week) 10 - 18 octombrie 2015 Bălți">
+  <meta name="author" content="Radu Dumbrăveanu">
 
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
@@ -52,126 +52,172 @@
       <a href="http://www.am-soft.md/"><img src="img/amsoft.png" style="height: 70px;"></a>
     </section>
 
+<section>
     <section>
       <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
-      <img src="img/version_control.gif">
+      <img src="img/version_control.gif" alt="" title="(C) Sursa imaginii: www.phdcomics.com">
+
+      <p><small>(C) Sursa imaginii: www.phdcomics.com</small></p> 
     </section>
 
     <section>
       <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
-      <p>Care ar fi unele dezavantaje?</p>
+      <p>Care ar fi unele dezavantaje ale acestei metode?</p>
       <ul>
-        <li class="fragment">dezavanatja 1</li>
-        <li class="fragment">dezavanatja 2</li>
+        <li class="fragment">Pot apărea complicații privind integritatea: daca am vrut să modific <strong>data_2010.05.28.dat</strong>, dar din greșeală am modificat și am salvat <strong>data_2010.05.27.dat</strong>.</li>
+        <li class="fragment">Nu permite lucrul colaborativ la unul și același fișier: <strong>data_2010.05.27_radu.dat</strong> și <strong>data_2010.05.27_irina.dat</strong> (cum să integrez modificările acestor fișiere în unul singur?).</li>
       </ul>
     </section>
-
+</section>
+<section>
     <section>
       <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
-      <!--<img src="img/Selection_013.png">-->
- <pre><code data-trim>
-public int Factorial(int n)
+ <pre><code data-trim class="java">
+public int factorial(int n)
 {
-	if (n == 0)//+RD20151017
-		return 1;//+RD20151017
-	else//+RD20151017
-		return n * Factorial(n-1);
+  return n * factorial(n-1);
 }    
-
-int factorial ( int input )
-{
-  int x, fact = 1;
-  for ( x = input; x > 1; x--)
-     fact *= x;
-
-  return fact;
-
-}
-
-System.out.println("Hellow world")
 </code></pre>
     </section>
 
     <section>
       <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
-      <p>Care ar fi unele dezavantaje?</p>
-      <ul>
-        <li class="fragment">dezavanatja 1</li>
-        <li class="fragment">dezavanatja 2</li>
-      </ul>
+ <pre><code data-trim class="java">
+public int factorial(int n)
+{
+  if (n == 0)
+    return 1;
+  else
+    return n * factorial(n-1);
+}    
+</code></pre>
     </section>
+
+    <section>
+      <h2>Modalităţi ad-hoc de control al versiunilor</h2>
+
+ <pre><code data-trim class="java">
+public int factorial(int n)
+{
+  if (n == 0) //+RD20151017
+    return 1; //+RD20151017
+  else        //+RD20151017
+    return n * factorial(n-1);
+}    
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Modalităţi ad-hoc de control al versiunilor</h2>
+
+ <pre><code data-trim class="java">
+public int factorial(int n)
+{
+  //if (n == 0) //-RD20151018
+  if (n <= 0) //+RD20151018
+    return 1; //+RD20151017
+  else        //+RD20151017
+    return n * factorial(n-1);
+}    
+</code></pre>
+
+    </section>
+
+    <section>
+      <h2>Modalităţi ad-hoc de control al versiunilor</h2>
+
+      <p>Care ar fi unele dezavantaje ale acestei metode?</p>
+    </section>
+</section>
 
     <section>
       <h2>Controlul versiunilor cu Git</h2>
       <img src="img/snapshots.png">
-      (c) http://git-scm.com/book/en/v2/Getting-Started-Git-Basics#Snapshots,-Not-Differences
+      <p><small>(C) Sursa imaginii: http://git-scm.com/book/en/v2/Getting-Started-Git-Basics#Snapshots,-Not-Differences</small></p>
     </section>
 
+    <section data-background="#ffffff">
     <section>
-      <h2>Distributivitatea :-) lui Git</h2>
+      <h2>Git este un sistem distribuit...</h2>
       <img src="img/distributed-vc.png">
+
+      <p><small>(C) Sursa imaginii: http://thepilcrow.net/explaining-basic-concepts-git-and-github/</small></p>
+
+    </section>
+    <section>
+      <h2>... și nu centralizat</h2>
       <img src="img/centralized-vc.png">
 
-      (c) http://thepilcrow.net/explaining-basic-concepts-git-and-github/
+      <p><small>(C) Sursa imaginii: http://thepilcrow.net/explaining-basic-concepts-git-and-github/</small></p>
+    </section>
+</section>
+
+    <section>
+      <h2>Foarte scurt istoric</h2>
+      <p>Git îl are ca autor pe Linus Torvalds și a fost elaborat în 2005 cu scopul de a înlocui sistemul de control al versiunilor folosit  pînă atunci la dezvoltarea nucleului Linux.</p>
+      
+      <p class="fragment"><a href="https://en.wikipedia.org/wiki/Linux_kernel#Development">Articolul din Wikipedia despre nucleul Linux</a> relatează că numărul de persoane implicate în dezvoltarea acestuia variază între 5000 și 6000, iar numărul de linii de cod a versiunii 3.10 în 2013 era 15,803,499.</p>
+
+      <p class="fragment">Nu știu care a fost motivul exact al alegerii numelui, dar în slangul limbii engleze britanice „git” înseamnă „persoană neplăcută” („unpleasant person”).</p>
     </section>
 
     <section>
-      <h2>Scurt istoric</h2>
-      <p>Git îl are ca autor pe Linus Torvalds și a fost elaborat pentru dezvoltarea nucleului Linux în 2005. </p>
+      <h2>Situri web care oferă Git</h2>
+<p><a href="https://github.com/"><img src="img/GitHub.jpg" style="height: 100px;"></a></p>
+<p class="fragment"><a href="https://bitbucket.org/"><img src="img/bitbucket-logo-blue.svg" style="height: 70px;"></a></p>
+<p class="fragment"><a href="https://about.gitlab.com/"><img src="img/gitlab.png" style="height: 70px;"></a></p>
 
-      <p>Nu știu care e motivul alegerii numelui, dar în în British English slang înseamnă „unpleasant person”.</p>
-    </section>
-
-    <section>
-      <h2>Servicii web care oferă Git</h2>
-<ul>
-<li><a href="https://github.com/"><img src="img/Octocat.png" style="height: 50px;">GitHub</a></li>
-<li><a href="https://bitbucket.org/"><img src="img/bitbucket-logo-blue.svg" style="height: 50px;"></a></li>
-<li><a href="https://about.gitlab.com/"><img src="img/gitlab.png" style="height: 50px;"></a></li>
-</ul>
     </section>
 
     <section>
       <h2>Instalare Git</h2>
 <ul>
-<li class="fragment"><a href="http://git-scm.com/downloads">Git linia de comandă</a></li>
-<li class="fragment"><a href="https://desktop.github.com/">Mediu de lucru cu proiectele de pe GitHub</a></li>
+<li>Într-un sistem GNU/Linux bazat pe Debian:</li>
+ <pre><code data-trim class="bash">
+   $ sudo apt-get install git
+ </code></pre>
+<li class="fragment">Pentru Mac OS X, Windows, Linux și Solaris:
+<ul>
+<li><a href="http://git-scm.com/downloads">doar pentru lucru în linia de comandă (fără interfață grafică)</a></li>
+<li><a href="https://git-scm.com/downloads/guis">cu interfață grafică</a></li>
+</ul>
+</li>
 </ul>
       
     </section>
 
     <section>
-      <h2>Proiect Git nou</h2>
+      <h2>Crearea unui proiect Git nou</h2>
 
- <pre><code data-trim>
-   git init workshop
-   cd workshop
+<pre><code data-trim class="bash">
+$ git init &lt;dosar&gt;
+$ cd &lt;dosar&gt;
  </code></pre>
 
 sau
 
- <pre><code data-trim>
-   mkdir workshop
-   cd workshop 
-   git init
+ <pre><code data-trim class="bash">
+$ mkdir &lt;dosar&gt;
+$ cd &lt;dosar&gt;
+$ git init
  </code></pre>
 
 
-Format general:
+Formatul general:
 
- <pre><code data-trim>
-   git init [dosar]
- </code></pre>
+<pre><code data-trim class="bash">
+$ git init [dosar]
+</code></pre>
 
-Puteți executa acestă comandă de câte ori doriți pe un proiect deja existent.
+<p class="fragment">Puteți executa acestă comandă de câte ori doriți pe un proiect deja existent.</p>
     </section>
 
     <section>
-      <h2>Un fișier</h2>
+      <h2>Primul fișier în proiect</h2>
 
 <pre><code class="bash" data-trim>
 touch README
