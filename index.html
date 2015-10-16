@@ -69,7 +69,7 @@
 
         <p>Care ar fi unele dezavantaje ale acestei metode?</p>
         <ul>
-          <li class="fragment">Pot apărea complicații privind integritatea: daca am vrut să modific <strong>data_2010.05.28.dat</strong>, dar din greșeală am modificat și am salvat
+          <li class="fragment">Pot apărea complicații privind integritatea: dacă am vrut să modific <strong>data_2010.05.28.dat</strong>, dar din greșeală am modificat și am salvat
             <strong>data_2010.05.27.dat</strong>.
           </li>
           <li class="fragment">Nu permite lucrul colaborativ la unul și același fișier: <strong>data_2010.05.27_radu.dat</strong> și <strong>data_2010.05.27_irina.dat</strong> (cum
@@ -82,10 +82,10 @@
       <section>
         <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
- <pre><code data-trim class="java">
+ <pre><code class="java">
    public int factorial(int n)
    {
-   return n * factorial(n-1);
+     return n * factorial(n-1);
    }
  </code></pre>
       </section>
@@ -93,13 +93,13 @@
       <section>
         <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
- <pre><code data-trim class="java">
+ <pre><code class="java">
    public int factorial(int n)
    {
-   if (n == 0)
-   return 1;
-   else
-   return n * factorial(n-1);
+     if (n == 0)
+       return 1;
+     else
+       return n * factorial(n-1);
    }
  </code></pre>
       </section>
@@ -107,13 +107,13 @@
       <section>
         <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
- <pre><code data-trim class="java">
+ <pre><code class="java">
    public int factorial(int n)
    {
-   if (n == 0) //+RD20151017
-   return 1; //+RD20151017
-   else //+RD20151017
-   return n * factorial(n-1);
+     if (n == 0) //+RD20151017
+       return 1; //+RD20151017
+     else        //+RD20151017
+       return n * factorial(n-1);
    }
  </code></pre>
       </section>
@@ -121,14 +121,14 @@
       <section>
         <h2>Modalităţi ad-hoc de control al versiunilor</h2>
 
- <pre><code data-trim class="java">
+ <pre><code class="java">
    public int factorial(int n)
    {
-   //if (n == 0) //-RD20151018
-   if (n <= 0) //+RD20151018
-   return 1; //+RD20151017
-   else //+RD20151017
-   return n * factorial(n-1);
+     //if (n == 0) //-RD20151018
+     if (n <= 0)   //+RD20151018
+       return 1;   //+RD20151017
+     else          //+RD20151017
+       return n * factorial(n-1);
    }
  </code></pre>
 
@@ -203,8 +203,8 @@
  </code></pre>
         <li class="fragment">Pentru Mac OS X, Windows, Linux și Solaris:
           <ul>
-            <li><a href="http://git-scm.com/downloads">doar pentru lucru în linia de comandă (fără interfață grafică)</a></li>
-            <li><a href="https://git-scm.com/downloads/guis">cu interfață grafică</a></li>
+            <li>doar pentru lucru în linia de comandă (fără interfață grafică): <a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></li>
+            <li>cu interfață grafică<a href="https://git-scm.com/downloads/guis">https://git-scm.com/downloads/guis</a></li>
           </ul>
         </li>
       </ul>
@@ -214,23 +214,23 @@
     <section>
       <h2>Crearea unui proiect Git nou</h2>
 
-<pre><code data-trim class="bash">
-  $ git init &lt;dosar&gt;
-  $ cd &lt;dosar&gt;
+<pre><code class="bash">
+  $ git init git-workshop
+  $ cd git-workshop
 </code></pre>
 
       sau
 
- <pre><code data-trim class="bash">
-   $ mkdir &lt;dosar&gt;
-   $ cd &lt;dosar&gt;
+ <pre><code class="bash">
+   $ mkdir git-workshop
+   $ cd git-workshop
    $ git init
  </code></pre>
 
 
       Formatul general:
 
-<pre><code data-trim class="bash">
+<pre><code class="bash">
   $ git init [dosar]
 </code></pre>
 
@@ -241,9 +241,10 @@
     <section data-state="customevent">
       <h2>Crearea unui proiect Git nou</h2>
 
+      <p>Nu uităm să specificăm autorul proiectului și ulterioarelor modificări:</p>
       <pre><code class="bash">
-      $ git config user.name "Your Username"
-      $ git config user.email "youremail@whatever.com"
+      $ git config user.name "Numele dvs."
+      $ git config user.email "posta@example.com"
       </code></pre>
     </section>
 
@@ -384,7 +385,6 @@
     </section>
 
     <section>
-    <section data-state="customevent">
       <h2>O privire asupra istoriei proiectului</h2>
       
       <p>Vizualizarea tuturor versiunilor proiectului</p>
@@ -419,9 +419,6 @@
 
     </section>
 
-    </section>
-
-    <section>
     <section>
       <h2>Încărcăm proiectul pe GitHub</h2>
 
@@ -446,8 +443,7 @@
       </ol>
 
     </section>
-    </section>
-    <section>
+
     <section>
       <h2>Ultimul exercițiu</h2>
       <ol>
@@ -461,6 +457,7 @@
         <li class="fragment">Adăugați un comentariu despre atelier în fișierul <strong>feedback.html</strong> conform modelului.</li>
       </ol>
     </section>
+
     <section>
       <h2>Ultimul exercițiu</h2>
       <ol start="5">
@@ -482,7 +479,6 @@
         <li class="fragment">și voi integra ramura <strong>master</strong> în ramura <strong>gh-pages</strong> pentru ca schimbările să fie vizibile pe <a href="http://vundicind.github.io/code-week">http://vundicind.github.io/code-week</a></li>
       </ol>
     </section>
-    </section>
 
     <section>
       <p>Vă mulțumesc!</p>
@@ -494,6 +490,11 @@
         <li class="fragment"><a href="https://streeling.github.io/git-lecture-notes">Întrebări frecvente legate de Git</a></li>
         <li class="fragment"><a href="https://streeling.github.io/git-rif">Traducerea în română a tutorialului de pe http://git-lectures.github.io/</a></li>
       </ul>
+      <p class="fragment">Alte materile în română:</p>
+      <ul class="fragment">
+        <li><a href="http://blog.infoeducatie.ro/tutorial/2015/04/14/github-101.html">http://blog.infoeducatie.ro/tutorial/2015/04/14/github-101.html</a></li>
+        <li><a href="http://rolisz.ro/2011/06/24/git-tutorial/">http://rolisz.ro/2011/06/24/git-tutorial/</a></li>
+      </ul>  
     </section>
 
   </div>
