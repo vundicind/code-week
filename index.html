@@ -246,6 +246,16 @@
     </section>
 
     <section>
+      <h2>Dosarul git, index-ul și dosarul de lucru</h2>
+      
+      <p class="fragment">Toate versiunile proiectului sunt stocate în dosarul git (git dir).</p>
+      <p class="fragment">Versiunea actuală a proiectului (nememorizată) se află în dosarul de lucru (work dir).</p>
+      <p class="fragment">Versiunea care urmează să fie memorată se află în index (stage sau index).</p>
+      <p class="fragment">O metaforă: dosarul de lucru este <strong>prezentul</strong>, dosarul git - <strong>trecutul</strong>, iar index-ul - este clipa între prezent și trecut.</p>
+
+    </section>
+
+    <section>
       <h2>Primul fișier în proiect</h2>
 
       <pre><code class="bash">
@@ -298,16 +308,6 @@
       </code></pre>
     </section>
 
-    <section>
-      <h2>Dosarul git, index-ul și dosarul de lucru</h2>
-      
-      <p class="fragment">Toate versiunile proiectului sunt stocate în dosarul git (git dir).</p>
-      <p class="fragment">Versiunea actuală a proiectului (nememorizată) se află în dosarul de lucru (work dir).</p>
-      <p class="fragment">Versiunea care urmează să fie memorată se află în index (stage sau index).</p>
-      <p class="fragment">O metaforă: dosarul de lucru este <strong>prezentul</strong>, dosarul git - <strong>trecutul</strong>, iar index-ul - este clipa între prezent și trecut.</p>
-
-    </section>
-    
     <section>
       <h2>Dosarul git, index-ul și dosarul de lucru</h2>
 
@@ -406,7 +406,7 @@
       
       <p>Vizualizarea conținutului fișierului dintr-o versiune</p>
       <pre><code class="bash">
-      $ git shot &lt;versiune&gt; README
+      $ git show &lt;versiune&gt;:README
       </code></pre>
 
       <p>Vizualizrea autorilor care au lucrat la un fișier per rând</p>
